@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " LT",
+    "S T",
+    " LT"
+  ],
+  "key": {
+    "L": {"item": "minecraft:leather"},
+    "S": {"item": "minecraft:stick"},
+    "T": {"item": "minecraft:string"}
+  },
+  "result": {
+    "item": "bowyery:bow_leather",
+    "count": 1
+  }
+}

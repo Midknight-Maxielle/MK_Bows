@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " DS",
+    "D S",
+    " DS"
+  ],
+  "key": {
+    "S": {"item": "minecraft:string"},
+    "D": {"item": "minecraft:diamond"}
+  },
+  "result": {
+    "item": "bowyery:bow_diamond",
+    "count": 1
+  }
+}
