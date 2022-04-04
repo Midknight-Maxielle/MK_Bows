@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {"item": "bowyery:villager_arrow"},
+    {"item": "bowyery:villager_arrow"},
+    {"item": "bowyery:villager_arrow"},
+    {"item": "bowyery:villager_arrow"}
+  ],
+  "result":{
+    "item": "minecraft:arrow",
+    "count": 1
+  }
+}

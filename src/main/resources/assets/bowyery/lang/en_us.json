@@ -1,0 +1,16 @@
+{
+  "itemGroup.bowyeryTab": "MK's Bowyery",
+
+  "item.bowyery.villager_arrow": "Villager Arrow",
+  "item.bowyery.barbed_arrow": "Barbed Arrow",
+  "item.bowyery.bow_leather": "Leather Bow",
+  "item.bowyery.bow_gold": "Golden Bow",
+  "item.bowyery.bow_iron": "Iron Bow",
+  "item.bowyery.bow_diamond": "Diamond Bow",
+  "item.bowyery.bow_netherite": "Netherite Bow",
+  "item.bowyery.quiver": "Quiver",
+
+  "tooltip.bowyery.bow_gold": "Has a built-in Infinity enchantment.",
+  "tooltip.bowyery.bow_netherite": "Has a built-in Flame enchantment.",
+  "tooltip.bowyery.quiver": "When held in your off-hand, has a 50% chance to retain fired arrows."
+}

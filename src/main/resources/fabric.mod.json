@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "bowyery",
+  "version": "${version}",
+
+  "name": "MK's Bowyery",
+  "description": "A mod to expand ranged combat into the early and mid-game.",
+  "authors": [
+    "Me!"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+
+  "license": "CC0-1.0",
+  "icon": "assets/modid/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.midknight.bowyery.Bowyery"
+    ]
+  },
+  "mixins": [
+    "bowyery.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.12.12",
+    "fabric": "*",
+    "minecraft": "1.18.x",
+    "java": ">=17"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
