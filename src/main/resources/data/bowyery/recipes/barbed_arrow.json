@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "  N",
+    " S ",
+    "F  "
+  ],
+  "key": {
+    "N": {"item": "minecraft:iron_nugget"},
+    "S": {"item": "minecraft:stick"},
+    "F": {"item": "minecraft:feather"}
+  },
+  "result": {
+    "item": "bowyery:barbed_arrow",
+    "count": 1
+  }
+}

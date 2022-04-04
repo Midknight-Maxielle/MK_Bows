@@ -1,0 +1,6 @@
+{
+  "parent": "bowyery:item/bow_netherite",
+  "textures": {
+    "layer0": "bowyery:item/bow_netherite_draw_2"
+  }
+}

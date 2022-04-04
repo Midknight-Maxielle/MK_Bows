@@ -1,0 +1,6 @@
+{
+  "parent": "bowyery:item/bow_gold",
+  "textures": {
+    "layer0": "bowyery:item/bow_gold_draw_1"
+  }
+}
