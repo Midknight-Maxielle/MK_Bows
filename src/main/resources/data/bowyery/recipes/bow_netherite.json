@@ -1,6 +1,0 @@
-{
-  "type": "minecraft:smithing",
-  "base": { "item": "bowyery:bow_diamond" },
-  "addition": { "item": "minecraft:netherite_ingot" },
-  "result": { "item": "bowyery:bow_netherite" }
-}
