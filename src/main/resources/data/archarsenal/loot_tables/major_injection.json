@@ -1,0 +1,36 @@
+{
+  "pools": [{
+    "name": "archarsenal",
+    "rolls": 2,
+    "entries": [
+      {
+        "type": "item",
+        "name": "archarsenal:bow_iron",
+        "weight": 3,
+        "functions":[{"function": "set_count", "count": {"min": 1, "max": 1}}]
+      },
+      {
+        "type": "item",
+        "name": "archarsenal:bow_gold",
+        "weight": 2,
+        "functions": [{"function": "set_count", "count": {"min": 1, "max": 1}}]
+      },
+      {
+        "type": "item",
+        "name": "archarsenal:bow_diamond",
+        "weight": 1,
+        "functions": [{"function": "set_count", "count": {"min": 1,"max": 1}}]
+      },
+      {
+        "type": "item",
+        "name": "archarsenal:barbed_arrow",
+        "weight": 2,
+        "functions": [{"function": "set_count", "count": {"min": 4, "max": 12}}]
+      },
+      {
+        "type": "empty",
+        "weight": 12
+      }
+    ]
+  }]
+}
