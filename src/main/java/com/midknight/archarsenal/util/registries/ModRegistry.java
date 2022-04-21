@@ -3,7 +3,6 @@ package com.midknight.archarsenal.util.registries;
 import com.midknight.archarsenal.ArchArsenal;
 import com.midknight.archarsenal.entity.BarbedArrow;
 import com.midknight.archarsenal.entity.VillagerArrow;
-import com.midknight.archarsenal.item.BowyeryBowItem;
 import com.midknight.archarsenal.item.BowyeryQuiverItem;
 import com.midknight.archarsenal.item.arrows.BarbedArrowItem;
 import com.midknight.archarsenal.item.arrows.VillagerArrowItem;
@@ -82,8 +81,8 @@ public class ModRegistry {
                     1
             ));
 
-    public static final RegistryObject<BowyeryBowItem> BOW_IRON =
-            ITEM.register("bow_iron", () -> new BowyeryBowItem(new Item.Properties()
+    public static final RegistryObject<ModBowItem> BOW_IRON =
+            ITEM.register("bow_iron", () -> new ModBowItem(new Item.Properties()
                     .durability(768)
                     .tab(CreativeTab.ARCHERS_ARSENAL),
                     1.0D,
@@ -92,8 +91,8 @@ public class ModRegistry {
                     0
             ));
 
-    public static final RegistryObject<BowyeryBowItem> BOW_GOLD =
-            ITEM.register("bow_gold", () -> new BowyeryBowItem(new Item.Properties()
+    public static final RegistryObject<ModBowItem> BOW_GOLD =
+            ITEM.register("bow_gold", () -> new ModBowItem(new Item.Properties()
                     .durability(384)
                     .tab(CreativeTab.ARCHERS_ARSENAL),
                     -0.5D,
@@ -109,8 +108,8 @@ public class ModRegistry {
                 }
             });
 
-    public static final RegistryObject <BowyeryBowItem> BOW_DIAMOND =
-            ITEM.register("bow_diamond", () -> new BowyeryBowItem(new Item.Properties()
+    public static final RegistryObject <ModBowItem> BOW_DIAMOND =
+            ITEM.register("bow_diamond", () -> new ModBowItem(new Item.Properties()
                     .durability(1024)
                     .tab(CreativeTab.ARCHERS_ARSENAL),
                     2.0D,
@@ -119,8 +118,8 @@ public class ModRegistry {
                     0
             ));
 
-    public static final RegistryObject <BowyeryBowItem> BOW_NETHERITE =
-            ITEM.register("bow_netherite", () -> new BowyeryBowItem(new Item.Properties()
+    public static final RegistryObject <ModBowItem> BOW_NETHERITE =
+            ITEM.register("bow_netherite", () -> new ModBowItem(new Item.Properties()
                             .durability(2048)
                             .tab(CreativeTab.ARCHERS_ARSENAL),
                             4.0D,
