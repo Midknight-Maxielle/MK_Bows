@@ -1,6 +1,0 @@
-{
-  "parent": "bowyery:item/bow_leather",
-  "textures": {
-    "layer0": "bowyery:item/bow_leather_draw_2"
-  }
-}
