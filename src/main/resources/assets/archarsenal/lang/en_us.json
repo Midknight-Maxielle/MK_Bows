@@ -10,7 +10,7 @@
   "item.archarsenal.bow_netherite": "Netherite Bow",
   "item.archarsenal.quiver": "Quiver",
 
-  "tooltip.archarsenal.bow_gold": "Has a built-in Infinity enchantment.",
-  "tooltip.archarsenal.bow_netherite": "Has a built-in Flame enchantment.",
-  "tooltip.archarsenal.quiver": "When held in your off-hand, has a 50% chance to retain fired arrows."
+  "tooltip.archarsenal.bow_gold": "Natural Infinity",
+  "tooltip.archarsenal.bow_netherite": "Immune to fire and lava.",
+  "tooltip.archarsenal.quiver": "When held in your off-hand, has a 20% chance to save fired arrows."
 }

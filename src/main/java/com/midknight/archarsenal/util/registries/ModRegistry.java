@@ -3,11 +3,11 @@ package com.midknight.archarsenal.util.registries;
 import com.midknight.archarsenal.ArchArsenal;
 import com.midknight.archarsenal.entity.BarbedArrow;
 import com.midknight.archarsenal.entity.VillagerArrow;
-import com.midknight.archarsenal.item.BowyeryQuiverItem;
+import com.midknight.archarsenal.item.QuiverItem;
 import com.midknight.archarsenal.item.arrows.BarbedArrowItem;
 import com.midknight.archarsenal.item.arrows.VillagerArrowItem;
 import com.midknight.archarsenal.util.CreativeTab;
-import com.midknight.knightcore.item.ModBowItem;
+import com.midknight.knightcore.item.CoreBowItem;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.entity.EntityType;
@@ -56,9 +56,9 @@ public class ModRegistry {
                 () -> new BarbedArrowItem(new Item.Properties().tab(CreativeTab.ARCHERS_ARSENAL
             )));
 
-    public static final RegistryObject<BowyeryQuiverItem> QUIVER =
-            ITEM.register("quiver", () -> new BowyeryQuiverItem(new Item.Properties()
-                    .durability(128)
+    public static final RegistryObject<QuiverItem> QUIVER =
+            ITEM.register("quiver", () -> new QuiverItem(new Item.Properties()
+                    .durability(64)
                     .tab(CreativeTab.ARCHERS_ARSENAL)
             ){
 
@@ -71,33 +71,30 @@ public class ModRegistry {
 
     // Bow Items //
 
-    public static final RegistryObject<ModBowItem> BOW_LEATHER =
-            ITEM.register("bow_leather", () -> new ModBowItem(new Item.Properties()
-                    .durability(512)
+    public static final RegistryObject<CoreBowItem> BOW_LEATHER =
+            ITEM.register("bow_leather", () -> new CoreBowItem(new Item.Properties()
+                    .durability(384)
                     .tab(CreativeTab.ARCHERS_ARSENAL),
                     0.0D,
-                    false,
                     false,
                     1
             ));
 
-    public static final RegistryObject<ModBowItem> BOW_IRON =
-            ITEM.register("bow_iron", () -> new ModBowItem(new Item.Properties()
-                    .durability(768)
+    public static final RegistryObject<CoreBowItem> BOW_IRON =
+            ITEM.register("bow_iron", () -> new CoreBowItem(new Item.Properties()
+                    .durability(576)
                     .tab(CreativeTab.ARCHERS_ARSENAL),
                     1.0D,
-                    false,
                     false,
                     0
             ));
 
-    public static final RegistryObject<ModBowItem> BOW_GOLD =
-            ITEM.register("bow_gold", () -> new ModBowItem(new Item.Properties()
+    public static final RegistryObject<CoreBowItem> BOW_GOLD =
+            ITEM.register("bow_gold", () -> new CoreBowItem(new Item.Properties()
                     .durability(384)
                     .tab(CreativeTab.ARCHERS_ARSENAL),
-                    -0.5D,
+                    0D,
                     true,
-                    false,
                     1
             ) {
 
@@ -108,23 +105,22 @@ public class ModRegistry {
                 }
             });
 
-    public static final RegistryObject <ModBowItem> BOW_DIAMOND =
-            ITEM.register("bow_diamond", () -> new ModBowItem(new Item.Properties()
-                    .durability(1024)
+    public static final RegistryObject <CoreBowItem> BOW_DIAMOND =
+            ITEM.register("bow_diamond", () -> new CoreBowItem(new Item.Properties()
+                    .durability(768)
                     .tab(CreativeTab.ARCHERS_ARSENAL),
                     2.0D,
-                    false,
                     false,
                     0
             ));
 
-    public static final RegistryObject <ModBowItem> BOW_NETHERITE =
-            ITEM.register("bow_netherite", () -> new ModBowItem(new Item.Properties()
-                            .durability(2048)
+    public static final RegistryObject <CoreBowItem> BOW_NETHERITE =
+            ITEM.register("bow_netherite", () -> new CoreBowItem(new Item.Properties()
+                            .durability(1152)
+                            .fireResistant()
                             .tab(CreativeTab.ARCHERS_ARSENAL),
                             4.0D,
                             false,
-                            true,
                             0
                     ) {
                         @Override @ParametersAreNonnullByDefault
