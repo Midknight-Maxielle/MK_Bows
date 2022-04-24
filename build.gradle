@@ -2,6 +2,12 @@ buildscript {
     repositories {
         // These repositories are only for Gradle plugins, put any other repositories in the repository block further below
         maven { url = 'https://maven.minecraftforge.net' }
+        maven {
+            url "https://cursemaven.com"
+            content {
+                includeGroup "curse.maven"
+            }
+        }
         mavenCentral()
     }
     dependencies {
@@ -160,6 +166,7 @@ dependencies {
 
     // Examples using mod jars from ./libs
 
+    // implementation fg.deobf("curse.maven:knightcore-617792:3767713")
     implementation fg.deobf("com.midknight:knightcore:1.18.2-1.0")
 
 }

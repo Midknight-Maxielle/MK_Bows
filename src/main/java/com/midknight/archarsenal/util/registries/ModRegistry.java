@@ -75,27 +75,27 @@ public class ModRegistry {
             ITEM.register("bow_leather", () -> new CoreBowItem(new Item.Properties()
                     .durability(384)
                     .tab(CreativeTab.ARCHERS_ARSENAL),
-                    0.0D,
-                    false,
-                    1
+                    0,
+                    2,
+                    false
             ));
 
     public static final RegistryObject<CoreBowItem> BOW_IRON =
             ITEM.register("bow_iron", () -> new CoreBowItem(new Item.Properties()
                     .durability(576)
                     .tab(CreativeTab.ARCHERS_ARSENAL),
-                    1.0D,
-                    false,
-                    0
+                    1,
+                    1,
+                    false
             ));
 
     public static final RegistryObject<CoreBowItem> BOW_GOLD =
             ITEM.register("bow_gold", () -> new CoreBowItem(new Item.Properties()
                     .durability(384)
                     .tab(CreativeTab.ARCHERS_ARSENAL),
-                    0D,
-                    true,
-                    1
+                    0,
+                    0,
+                    true
             ) {
 
                 @Override @ParametersAreNonnullByDefault
@@ -109,9 +109,9 @@ public class ModRegistry {
             ITEM.register("bow_diamond", () -> new CoreBowItem(new Item.Properties()
                     .durability(768)
                     .tab(CreativeTab.ARCHERS_ARSENAL),
-                    2.0D,
-                    false,
-                    0
+                    1,
+                    0,
+                    false
             ));
 
     public static final RegistryObject <CoreBowItem> BOW_NETHERITE =
@@ -119,9 +119,9 @@ public class ModRegistry {
                             .durability(1152)
                             .fireResistant()
                             .tab(CreativeTab.ARCHERS_ARSENAL),
-                            4.0D,
-                            false,
-                            0
+                            2,
+                            0,
+                            false
                     ) {
                         @Override @ParametersAreNonnullByDefault
                         public void appendHoverText(ItemStack stack, @Nullable Level worldIn, List<Component> tooltip, TooltipFlag flagIn) {
