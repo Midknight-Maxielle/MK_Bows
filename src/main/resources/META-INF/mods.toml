@@ -34,7 +34,7 @@ credits="Thanks to my partner, my cats, and my community." #optional
 authors="Maxielle" #optional
 # The description text for the mod (multi line!) (#mandatory)
 description='''
-Archers' Arsenal is a vanilla enhancement mod that aims to give ranged combat weaposn diverse options equal to vanilla melee weapons.'''
+Archers' Arsenal is a vanilla enhancement mod that aims to give ranged combat weapons diverse options equal to vanilla melee weapons.'''
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
 [[dependencies.archarsenal]] #optional
     # the modid of the dependency
