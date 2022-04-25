@@ -1,8 +1,6 @@
 {
   "replace": false,
   "entries": [
-    "archarsenal:village_houses",
-    "archarsenal:structures_minor",
-    "archarsenal:structures_major"
+    "archarsenal:arrows_in_village_fletcher"
   ]
 }
