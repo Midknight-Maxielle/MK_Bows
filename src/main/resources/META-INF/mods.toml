@@ -21,7 +21,7 @@ modId="archarsenal" #mandatory
 # see the associated build.gradle script for how to populate this completely automatically during a build
 version="1.8.2-1.0.1" #mandatory
  # A display name for the mod
-displayName="Archer Arsenal" #mandatory
+displayName="Archers' Arsenal" #mandatory
 # A URL to query for updates for this mod. See the JSON update specification https://mcforge.readthedocs.io/en/latest/gettingstarted/autoupdate/
 #updateJSONURL="https://change.me.example.invalid/updates.json" #optional
 # A URL for the "homepage" for this mod, displayed in the mod UI
@@ -51,7 +51,7 @@ Archers' Arsenal is a vanilla enhancement mod that aims to give ranged combat we
 [[dependencies.archarsenal]]
     modId="knightcore" #mandatory
     mandatory=true
-    versionRange="[1.18.2-1.0,)" #mandatory
+    versionRange="[1.0.0,)" #mandatory
     ordering="NONE"
     side="BOTH"
 
