@@ -16,7 +16,7 @@ public class BarbedArrowItem extends ArrowItem {
 
     // Constructor //
 
-    public BarbedArrowItem(Item.Properties properties) {
+    public BarbedArrowItem(Properties properties) {
         super(properties);
     }
 

@@ -19,7 +19,7 @@ modId="archarsenal" #mandatory
 # The version number of the mod - there's a few well known ${} variables useable here or just hardcode it
 # ${file.jarVersion} will substitute the value of the Implementation-Version as read from the mod's JAR file metadata
 # see the associated build.gradle script for how to populate this completely automatically during a build
-version="1.8.2-1.0.1" #mandatory
+version="1.8.2-1.1" #mandatory
  # A display name for the mod
 displayName="Archers' Arsenal" #mandatory
 # A URL to query for updates for this mod. See the JSON update specification https://mcforge.readthedocs.io/en/latest/gettingstarted/autoupdate/
@@ -31,7 +31,7 @@ logoFile="examplemod.png" #optional
 # A text field displayed in the mod UI
 credits="Thanks to my partner, my cats, and my community." #optional
 # A text field displayed in the mod UI
-authors="Maxielle" #optional
+authors="MK" #optional
 # The description text for the mod (multi line!) (#mandatory)
 description='''
 Archers' Arsenal is a vanilla enhancement mod that aims to give ranged combat weapons diverse options equal to vanilla melee weapons.'''
@@ -51,7 +51,7 @@ Archers' Arsenal is a vanilla enhancement mod that aims to give ranged combat we
 [[dependencies.archarsenal]]
     modId="knightcore" #mandatory
     mandatory=true
-    versionRange="[1.0.0,)" #mandatory
+    versionRange="[1.18.2-1.1,)" #mandatory
     ordering="NONE"
     side="BOTH"
 
