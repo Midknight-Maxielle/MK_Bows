@@ -5,6 +5,6 @@
       "loot_table_id": "minecraft:chests/village/village_fletcher"
     }
   ],
-  "addition": "archarsenal:villager_arrow",
-  "type": "archarsenal:arrows_in_village_fletcher"
+  "item": "archarsenal:villager_arrow",
+  "type": "archarsenal:add_item"
 }
