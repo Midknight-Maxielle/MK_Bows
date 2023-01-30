@@ -1,4 +1,4 @@
-package com.midknight.archarsenal.util;
+package com.mk.archarsenal.util;
 
 import com.google.gson.JsonObject;
 import net.minecraft.resources.ResourceLocation;

@@ -1,4 +1,4 @@
-package com.midknight.archarsenal.util;
+package com.mk.archarsenal.util;
 
 import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.resources.ResourceLocation;

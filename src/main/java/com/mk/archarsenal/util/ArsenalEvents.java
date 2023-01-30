@@ -1,7 +1,7 @@
-package com.midknight.archarsenal.util;
+package com.mk.archarsenal.util;
 
-import com.midknight.archarsenal.ArchArsenal;
-import com.midknight.archarsenal.item.QuiverItem;
+import com.mk.archarsenal.ArchArsenal;
+import com.mk.archarsenal.item.QuiverItem;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
@@ -16,10 +16,10 @@ public class ArsenalEvents {
     @SubscribeEvent
     public static void handleQuiver(ArrowLooseEvent event) {
 
-        LivingEntity player = event.getEntityLiving();
+        LivingEntity player = event.getEntity();
         ItemStack offhand = player.getOffhandItem();
         ItemStack bow = event.getBow();
-        Level world = event.getWorld();
+        Level world = event.getLevel();
 
         ItemStack arrowStack = player.getProjectile(bow);
 

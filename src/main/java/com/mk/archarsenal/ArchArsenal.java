@@ -1,9 +1,9 @@
-package com.midknight.archarsenal;
+package com.mk.archarsenal;
 
-import com.midknight.archarsenal.entity.renderers.BarbedArrowRenderer;
-import com.midknight.archarsenal.entity.renderers.VillagerArrowRenderer;
-import com.midknight.archarsenal.util.KnightcoreBowModelProperties;
-import com.midknight.archarsenal.util.registries.ModRegistry;
+import com.mk.archarsenal.entity.renderers.BarbedArrowRenderer;
+import com.mk.archarsenal.entity.renderers.VillagerArrowRenderer;
+import com.mk.archarsenal.util.KnightcoreBowModelProperties;
+import com.mk.archarsenal.util.registries.ModRegistry;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.SubscribeEvent;

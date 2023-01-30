@@ -1,4 +1,4 @@
-package com.midknight.archarsenal.item;
+package com.mk.archarsenal.item;
 
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.Level;

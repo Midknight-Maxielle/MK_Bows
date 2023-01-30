@@ -1,6 +1,6 @@
-package com.midknight.archarsenal.entity;
+package com.mk.archarsenal.entity;
 
-import com.midknight.archarsenal.util.registries.ModRegistry;
+import com.mk.archarsenal.util.registries.ModRegistry;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;

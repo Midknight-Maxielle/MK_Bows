@@ -1,6 +1,6 @@
-package com.midknight.archarsenal.util;
+package com.mk.archarsenal.util;
 
-import com.midknight.archarsenal.util.registries.ModRegistry;
+import com.mk.archarsenal.util.registries.ModRegistry;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 

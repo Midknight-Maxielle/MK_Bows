@@ -1,15 +1,14 @@
-package com.midknight.archarsenal.util.registries;
+package com.mk.archarsenal.util.registries;
 
-import com.midknight.archarsenal.ArchArsenal;
-import com.midknight.archarsenal.entity.BarbedArrow;
-import com.midknight.archarsenal.entity.VillagerArrow;
-import com.midknight.archarsenal.item.QuiverItem;
-import com.midknight.archarsenal.item.arrows.BarbedArrowItem;
-import com.midknight.archarsenal.item.arrows.VillagerArrowItem;
-import com.midknight.archarsenal.util.CreativeTab;
-import com.midknight.knightcore.item.CoreBowItem;
+import com.mk.archarsenal.ArchArsenal;
+import com.mk.archarsenal.entity.BarbedArrow;
+import com.mk.archarsenal.entity.VillagerArrow;
+import com.mk.archarsenal.item.QuiverItem;
+import com.mk.archarsenal.item.arrows.BarbedArrowItem;
+import com.mk.archarsenal.item.arrows.VillagerArrowItem;
+import com.mk.archarsenal.util.CreativeTab;
+import com.mk.knightcore.item.CoreBowItem;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.item.Item;
@@ -35,7 +34,7 @@ public class ModRegistry {
     // Deferred Registers
 
     public static DeferredRegister<EntityType<?>> ENTITY_TYPES =
-        DeferredRegister.create(ForgeRegistries.ENTITIES, ArchArsenal.MOD_ID);
+        DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, ArchArsenal.MOD_ID);
 
     public static DeferredRegister<Item> ITEM =
     DeferredRegister.create(ForgeRegistries.ITEMS, ArchArsenal.MOD_ID);
@@ -64,7 +63,7 @@ public class ModRegistry {
 
                 @Override @ParametersAreNonnullByDefault
                 public void appendHoverText(ItemStack stack, @Nullable Level worldIn, List<Component> tooltip, TooltipFlag flagIn) {
-                    tooltip.add(new TranslatableComponent("tooltip.archarsenal.quiver"));
+                    tooltip.add(Component.translatable("tooltip.archarsenal.quiver"));
                     super.appendHoverText(stack, worldIn, tooltip, flagIn);
                 }
             });
@@ -100,7 +99,7 @@ public class ModRegistry {
 
                 @Override @ParametersAreNonnullByDefault
                 public void appendHoverText(ItemStack stack, @Nullable Level worldIn, List<Component> tooltip, TooltipFlag flagIn) {
-                    tooltip.add(new TranslatableComponent("tooltip.archarsenal.bow_gold"));
+                    tooltip.add(Component.translatable("tooltip.archarsenal.bow_gold"));
                     super.appendHoverText(stack, worldIn, tooltip, flagIn);
                 }
             });
@@ -125,7 +124,7 @@ public class ModRegistry {
                     ) {
                         @Override @ParametersAreNonnullByDefault
                         public void appendHoverText(ItemStack stack, @Nullable Level worldIn, List<Component> tooltip, TooltipFlag flagIn) {
-                            tooltip.add(new TranslatableComponent("tooltip.archarsenal.bow_netherite"));
+                            tooltip.add(Component.translatable("tooltip.archarsenal.bow_netherite"));
                             super.appendHoverText(stack, worldIn, tooltip, flagIn);
                         }
                     }

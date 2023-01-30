@@ -1,6 +1,6 @@
-package com.midknight.archarsenal.entity.renderers;
+package com.mk.archarsenal.entity.renderers;
 
-import com.midknight.archarsenal.entity.VillagerArrow;
+import com.mk.archarsenal.entity.VillagerArrow;
 import net.minecraft.client.renderer.entity.ArrowRenderer;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.resources.ResourceLocation;
