@@ -1,6 +1,7 @@
 package net.mk.archers_arsenal;
 
 import net.fabricmc.api.ModInitializer;
+import net.mk.archers_arsenal.items.ModItemRegistry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -11,6 +12,8 @@ public class ArchersArsenal implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+
+		ModItemRegistry.registerModItems();
 
 	}
 }
