@@ -1,9 +1,5 @@
-# Fabric Example Mod
+## Acknowledgements and Special Thanks:
 
-## Setup
-
-For setup instructions please see the [fabric wiki page](https://fabricmc.net/wiki/tutorial:setup) that relates to the IDE that you are using.
-
-## License
-
-This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
+- Kaupenjoe, whose Fabric modding tutorials I referenced frequently when learning Fabric for this port.
+- Iron Bows mod team, whose source code I used as a reference to learn about ModelPredicate registration and Field of View modification.
+- GRUULBBY, for constant moral support and being my troubleshooting soundboard. 
