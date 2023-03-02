@@ -6,7 +6,8 @@
   "mixins": [
   ],
   "client": [
-    "FOVMixin"
+    "FOVMixin",
+    "QuiverMixin"
   ],
   "injectors": {
     "defaultRequire": 1

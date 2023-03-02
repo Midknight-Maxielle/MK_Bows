@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "archers_arsenal:barbed_arrow"
+    "archers_arsenal:barbed_arrow",
+    "archers_arsenal:villager_arrow"
   ]
 }

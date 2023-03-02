@@ -69,12 +69,16 @@ public class ModItems {
             }
     );
 
-    // Arrow Items
+    // Arrow Items //
 
-    public static final Item BARBED_ARROW = registerItem("barbed_arrow", new BarbedArrowItem(new FabricItemSettings().group(ModItemGroup.ARCHERS_ARSENAL))
-    );
+    public static final Item BARBED_ARROW = registerItem("barbed_arrow", new BarbedArrowItem(new FabricItemSettings().group(ModItemGroup.ARCHERS_ARSENAL)));
+    public static final Item VILLAGER_ARROW = registerItem("villager_arrow", new VillagerArrowItem(new FabricItemSettings().group(ModItemGroup.ARCHERS_ARSENAL)));
 
-    // Register Methods
+    // Quiver Item //
+
+    public static final Item QUIVER = registerItem("quiver", new QuiverItem(new FabricItemSettings().group(ModItemGroup.ARCHERS_ARSENAL).maxDamage(64)));
+
+    // Register Methods //
 
     public static Item registerItem(String name, Item item) {
         return Registry.register(Registry.ITEM, new Identifier(ArchersArsenal.MOD_ID, name), item);

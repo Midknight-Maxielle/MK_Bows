@@ -17,6 +17,7 @@ import net.mk.archers_arsenal.entities.ModEntities;
 import net.mk.archers_arsenal.items.ModBowItem;
 import net.mk.archers_arsenal.items.ModItems;
 import net.mk.archers_arsenal.renderers.BarbedArrowRenderer;
+import net.mk.archers_arsenal.renderers.VillagerArrowRenderer;
 import net.mk.archers_arsenal.utility.EntitySpawnPacket;
 
 import java.util.UUID;
@@ -44,6 +45,7 @@ public class ArchersArsenalClient implements ClientModInitializer {
     public void onInitializeClient() {
 
         EntityRendererRegistry.register(ModEntities.BARBED_ARROW_TYPE, BarbedArrowRenderer::new);
+        EntityRendererRegistry.register(ModEntities.VILLAGER_ARROW_TYPE, VillagerArrowRenderer::new);
 
         this.registerBow(ModItems.BOW_LEATHER);
         this.registerBow(ModItems.BOW_IRON);
