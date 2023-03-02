@@ -20,6 +20,9 @@
   "entrypoints": {
     "main": [
       "net.mk.archers_arsenal.ArchersArsenal"
+    ],
+    "client": [
+      "net.mk.archers_arsenal.ArchersArsenalClient"
     ]
   },
   "mixins": [

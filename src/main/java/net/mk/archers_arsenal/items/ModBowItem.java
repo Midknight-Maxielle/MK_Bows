@@ -17,21 +17,21 @@ import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
 import org.lwjgl.system.NonnullDefault;
 
+import java.util.function.Predicate;
+
 public class ModBowItem extends BowItem {
 
     // Public fields - used to set custom damage and draw-time modifiers + manage bow use and arrow pickup for infinity and creative mode.
 
     public int DMG_MOD;
-    public int DRAW_MOD;
     public boolean HAS_NATURAL_INFINITY;
 
     // Constructor
 
-    public ModBowItem(Settings settings, int dmgMod, int drawMod, boolean inf) {
+    public ModBowItem(Settings settings, int dmgMod, boolean inf) {
 
         super(settings);
         DMG_MOD = dmgMod;
-        DRAW_MOD = drawMod;
         HAS_NATURAL_INFINITY = inf;
 
     }
@@ -128,10 +128,10 @@ public class ModBowItem extends BowItem {
                     }
 
                     world.playSound(
-                            (PlayerEntity)null, player.getX(), player.getY(), player.getZ(),
+                            (PlayerEntity) null, player.getX(), player.getY(), player.getZ(),
                             SoundEvents.ENTITY_ARROW_SHOOT, SoundCategory.PLAYERS,
                             1.0F, 1.0F / (world.getRandom().nextFloat() * 0.4F + 1.2F) + f * 0.5F);
-                    if(!HAS_INFINITY && !IS_CREATIVE) {
+                    if (!HAS_INFINITY && !IS_CREATIVE) {
                         arrows.decrement(1);
                         if (arrows.isEmpty()) {
                             player.getInventory().removeOne(arrows);
