@@ -13,7 +13,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(BowItem.class)
 public abstract class QuiverMixin {
 
-    @Inject(method = "onStoppedUsing", at = @At(value = "INVOKE", target = "Lnet/minecraft/item/ItemStack;decrement(I)V"))
+    @Inject(method = "onStoppedUsing", at = @At(value = "TAIL"))
     protected void injectRoll(ItemStack stack, World world, LivingEntity player, int remainingDuration, CallbackInfo callback) {
 
         ItemStack offHand = player.getOffHandStack();
