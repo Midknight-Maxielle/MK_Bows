@@ -133,21 +133,6 @@ public class ModBowItem extends BowItem {
                             1.0F, 1.0F / (world.getRandom().nextFloat() * 0.4F + 1.2F) + f * 0.5F);
                     if (!HAS_INFINITY && !IS_CREATIVE) {
 
-                        // Facilitates the function of the quiver item.
-
-                        ItemStack offHand = player.getOffHandStack();
-                        boolean quiverRoll = false;
-
-                        if(offHand.getItem() instanceof QuiverItem quiver) {
-                            quiverRoll = quiver.rollArrowSave(world);
-                        }
-                        if(quiverRoll) {
-                            offHand.damage(1, player, playerEntity -> playerEntity.sendToolBreakStatus(player.getActiveHand()));
-                            return;
-                        }
-
-                        // Vanilla code for decrementing the arrow stack, after arrow is shot.
-
                         arrows.decrement(1);
                         if (arrows.isEmpty()) {
                             player.getInventory().removeOne(arrows);

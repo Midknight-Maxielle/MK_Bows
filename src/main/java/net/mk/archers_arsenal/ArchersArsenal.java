@@ -3,6 +3,7 @@ package net.mk.archers_arsenal;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
+import net.fabricmc.fabric.api.event.player.UseItemCallback;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
@@ -10,6 +11,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.registry.Registry;
 import net.mk.archers_arsenal.entities.ModEntities;
+import net.mk.archers_arsenal.events.QuiverLogicHandler;
 import net.mk.archers_arsenal.items.ModItems;
 import net.mk.archers_arsenal.renderers.BarbedArrowRenderer;
 import net.mk.archers_arsenal.utility.EntitySpawnPacket;
@@ -29,6 +31,7 @@ public class ArchersArsenal implements ModInitializer {
 
 		ModItems.registerModItems();
 		ModEntities.registerEntities();
+		UseItemCallback.EVENT.register(new QuiverLogicHandler());
 
 
 
