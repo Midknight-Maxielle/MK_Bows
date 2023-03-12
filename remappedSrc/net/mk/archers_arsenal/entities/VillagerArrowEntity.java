@@ -19,40 +19,40 @@ import net.minecraft.particle.ParticleTypes;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionUtil;
 import net.minecraft.potion.Potions;
-import net.minecraft.registry.Registries;
 import net.minecraft.util.hit.EntityHitResult;
+import net.minecraft.util.registry.Registry;
 import net.minecraft.world.World;
 import net.mk.archers_arsenal.items.ModItems;
 
 import java.util.Collection;
 import java.util.Set;
 
-public class BarbedArrowEntity extends PersistentProjectileEntity {
+public class VillagerArrowEntity extends PersistentProjectileEntity {
 
     // Fields //
 
     private Potion potion = Potions.EMPTY;
-    private static final TrackedData<Integer> COLOR = DataTracker.registerData(BarbedArrowEntity.class, TrackedDataHandlerRegistry.INTEGER);
+    private static final TrackedData<Integer> COLOR = DataTracker.registerData(VillagerArrowEntity.class, TrackedDataHandlerRegistry.INTEGER);
     private final Set<StatusEffectInstance> effects = Sets.newHashSet();
     private boolean colorSet;
 
     public static double BASE_DMG = 3.0d;
-    public static EntityType<BarbedArrowEntity> BARBED_ARROW_ENTITY = ModEntities.BARBED_ARROW_TYPE;
+    public static EntityType<VillagerArrowEntity> VILLAGER_ARROW_ENTITY = ModEntities.VILLAGER_ARROW_TYPE;
 
     // Constructor Methods //
 
-    public BarbedArrowEntity(EntityType<BarbedArrowEntity> entity, World world) {
+    public VillagerArrowEntity(EntityType<VillagerArrowEntity> entity, World world) {
         super(entity, world);
         this.setDamage(BASE_DMG);
 
     }
-    public BarbedArrowEntity(World world, LivingEntity shooter) {
-        super(BARBED_ARROW_ENTITY, shooter, world);
+    public VillagerArrowEntity(World world, LivingEntity shooter) {
+        super(VILLAGER_ARROW_ENTITY, shooter, world);
         this.setDamage(BASE_DMG);
 
     }
-    public BarbedArrowEntity(World world, double x, double y, double z) {
-        super(BARBED_ARROW_ENTITY, x, y, z, world);
+    public VillagerArrowEntity(World world, double x, double y, double z) {
+        super(VILLAGER_ARROW_ENTITY, x, y, z, world);
         this.setDamage(BASE_DMG);
     }
 
@@ -74,7 +74,7 @@ public class BarbedArrowEntity extends PersistentProjectileEntity {
             } else {
                 this.setColor(i);
             }
-        } else if (stack.isOf(ModItems.BARBED_ARROW)) {
+        } else if (stack.isOf(ModItems.VILLAGER_ARROW)) {
             this.potion = Potions.EMPTY;
             this.effects.clear();
             this.dataTracker.set(COLOR, -1);
@@ -100,7 +100,7 @@ public class BarbedArrowEntity extends PersistentProjectileEntity {
     @Override
     protected ItemStack asItemStack() {
         if (this.effects.isEmpty() && this.potion == Potions.EMPTY) {
-            return new ItemStack(ModItems.BARBED_ARROW);
+            return new ItemStack(ModItems.VILLAGER_ARROW);
         } else {
             ItemStack itemStack = new ItemStack(Items.TIPPED_ARROW);
             PotionUtil.setPotion(itemStack, this.potion);
@@ -122,7 +122,7 @@ public class BarbedArrowEntity extends PersistentProjectileEntity {
     public void writeCustomDataToNbt(NbtCompound nbt) {
         super.writeCustomDataToNbt(nbt);
         if (this.potion != Potions.EMPTY) {
-            nbt.putString("Potion", Registries.POTION.getId(this.potion).toString());
+            nbt.putString("Potion", Registry.POTION.getId(this.potion).toString());
         }
 
         if (this.colorSet) {
