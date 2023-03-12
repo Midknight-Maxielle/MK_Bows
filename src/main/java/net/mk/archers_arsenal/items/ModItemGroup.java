@@ -6,7 +6,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.mk.archers_arsenal.ArchersArsenal;
-import net.mk.archers_arsenal.items.ModItems;
 
 public class ModItemGroup {
 

@@ -1,6 +1,5 @@
 package net.mk.archers_arsenal.mixin;
 
-import net.minecraft.client.gui.screen.TitleScreen;
 import net.minecraft.client.network.AbstractClientPlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;

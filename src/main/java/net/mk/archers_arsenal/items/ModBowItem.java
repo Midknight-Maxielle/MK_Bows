@@ -17,7 +17,6 @@ import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
 import org.lwjgl.system.NonnullDefault;
 
-import java.util.function.Predicate;
 
 public class ModBowItem extends BowItem {
 
