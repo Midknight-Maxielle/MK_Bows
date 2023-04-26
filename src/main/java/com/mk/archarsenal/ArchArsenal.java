@@ -42,6 +42,8 @@ public class ArchArsenal {
 
         MinecraftForge.EVENT_BUS.register(this);
 
+        ModRegistry.registerITEM();
+
         // Register the commonSetup method for modloading
         // modEventBus.addListener(this::commonSetup);
 
