@@ -1,5 +1,6 @@
 package com.mk.archarsenal;
 
+import com.mk.archarsenal.utility.ModBowModelProperties;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.world.item.BlockItem;
@@ -26,6 +27,7 @@ import org.slf4j.Logger;
 
 @Mod(ArchArsenal.MODID)
 public class ArchArsenal {
+
     public static final String MODID = "archarsenal";
 
     //private static final Logger LOGGER = LogUtils.getLogger();
@@ -38,7 +40,10 @@ public class ArchArsenal {
     //public static final RegistryObject<Item> EXAMPLE_BLOCK_ITEM = ITEMS.register("example_block", () -> new BlockItem(EXAMPLE_BLOCK.get(), new Item.Properties()));
 
     public ArchArsenal() {
+
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        modEventBus.addListener(this::modelBows);
 
         MinecraftForge.EVENT_BUS.register(this);
 
@@ -55,6 +60,13 @@ public class ArchArsenal {
 
         // Register the item to a creative tab
         // modEventBus.addListener(this::addCreative);
+    }
+
+    private void modelBows(final FMLClientSetupEvent event) {
+
+        event.enqueueWork(() -> {
+            ModBowModelProperties.modelBow(ModRegistry.BOW_LEATHER.get());
+        });
     }
 }
 

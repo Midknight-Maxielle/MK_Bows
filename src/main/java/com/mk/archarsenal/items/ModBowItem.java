@@ -15,6 +15,7 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.Level;
+import org.jetbrains.annotations.NotNull;
 import org.lwjgl.system.NonnullDefault;
 
 public class ModBowItem extends BowItem {
@@ -37,14 +38,11 @@ public class ModBowItem extends BowItem {
 
         boolean IS_CREATIVE = player.getAbilities().instabuild;
         return
-                IS_CREATIVE ||
-                        EnchantmentHelper.getTagEnchantmentLevel(Enchantments.INFINITY_ARROWS, bow) > 0 ||
-                        !player.getProjectile(bow).isEmpty() ||
-                        NAT_INFINITY;
+                IS_CREATIVE || EnchantmentHelper.getTagEnchantmentLevel(Enchantments.INFINITY_ARROWS, bow) > 0 || !(player.getProjectile(bow).isEmpty()) || NAT_INFINITY;
     }
 
     @Override
-    @NonnullDefault
+    @NotNull @NonnullDefault
     public InteractionResultHolder<ItemStack> use(Level world, Player player, InteractionHand hand) {
 
         ItemStack bow = player.getItemInHand(hand);
@@ -64,7 +62,7 @@ public class ModBowItem extends BowItem {
 
         if (entity instanceof Player player) {
             boolean IS_CREATIVE = player.getAbilities().instabuild;
-            boolean IS_INFINITE = NAT_INFINITY || IS_CREATIVE || EnchantmentHelper.getTagEnchantmentLevel(Enchantments.INFINITY_ARROWS, bow) > 0;
+            boolean IS_INFINITE = NAT_INFINITY || EnchantmentHelper.getTagEnchantmentLevel(Enchantments.INFINITY_ARROWS, bow) > 0;
             ItemStack arrows = player.getProjectile(bow);
 
             if (!arrows.isEmpty() || IS_INFINITE) {
@@ -105,7 +103,7 @@ public class ModBowItem extends BowItem {
 
                         bow.hurtAndBreak(1, player, (p) -> p.broadcastBreakEvent(player.getUsedItemHand()));
 
-                        if (IS_INFINITE || IS_CREATIVE && (arrows.is(Items.SPECTRAL_ARROW) || arrows.is(Items.TIPPED_ARROW))) {
+                        if (IS_INFINITE || IS_CREATIVE || (arrows.is(Items.SPECTRAL_ARROW) || arrows.is(Items.TIPPED_ARROW))) {
                             arrowEntity.pickup = AbstractArrow.Pickup.CREATIVE_ONLY;
                         }
 

@@ -18,7 +18,7 @@ public class ModRegistry {
 
     // Registered Objects
 
-    public static final RegistryObject<ModBowItem> LEATHER_BOW =
+    public static final RegistryObject<ModBowItem> BOW_LEATHER =
             ITEM.register("bow_leather", () -> new ModBowItem(new Item.Properties()
                     .durability(384),
                     false
