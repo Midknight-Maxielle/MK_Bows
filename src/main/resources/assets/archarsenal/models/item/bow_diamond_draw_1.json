@@ -1,0 +1,6 @@
+{
+  "parent": "archarsenal:item/bow_diamond",
+  "textures": {
+    "layer0": "archarsenal:item/bow_diamond_draw_1"
+  }
+}

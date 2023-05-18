@@ -1,3 +1,17 @@
 {
-  "item.archarsenal.bow_leather": "Leather Bow"
+  "item.archarsenal.bow_leather": "Leather Bow",
+  "item.archarsenal.bow_iron": "Iron Bow",
+  "item.archarsenal.bow_gold": "Golden Bow",
+  "item.archarsenal.bow_diamond": "Diamond Bow",
+  "item.archarsenal.bow_netherite": "Netherite Bow",
+
+  "item.archarsenal.barbed_arrow": "Barbed Arrow",
+  "item.archarsenal.villager_arrow": "Villager Arrow",
+  "item.archarsenal.quiver": "Quiver",
+
+  "tooltip.archarsenal.quiver": "Has a 25% to generate a new arrow when one is shot with this item in your off-hand.",
+  "tooltip.archarsenal.bow_gold": "Fragile, but requires no ammunition.",
+  "tooltip.archarsenal.bow_netherite": "This item cannot be destroyed by fire or lava.",
+
+  "creativemodetab.archarsenal_tab": "Archers' Arsenal"
 }

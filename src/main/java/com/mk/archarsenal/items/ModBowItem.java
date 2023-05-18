@@ -33,6 +33,10 @@ public class ModBowItem extends BowItem {
 
     // Methods //
 
+    public boolean getNatInfinity() {
+        return NAT_INFINITY;
+    }
+
     @NonnullDefault
     public boolean canDraw(ItemStack bow, Player player) {
 

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {"item": "archarsenal:villager_arrow"},
+    {"item": "archarsenal:villager_arrow"},
+    {"item": "archarsenal:villager_arrow"},
+    {"item": "archarsenal:villager_arrow"}
+  ],
+  "result":{
+    "item": "minecraft:arrow",
+    "count": 1
+  }
+}
