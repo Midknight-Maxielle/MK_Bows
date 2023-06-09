@@ -1,0 +1,37 @@
+{
+	"schemaVersion": 1,
+	"id": "archers_arsenal",
+	"version": "${version}",
+	"name": "Archers' Arsenal",
+	"description": "Archers' Arsenal is a vanilla enhancement mod that aims to give ranged combat weapons diverse options equal to vanilla melee weapons.",
+	"authors": [
+		"MK"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "GNU GPL v3.0",
+	"icon": "assets/modid/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.mk.ArchersArsenal"
+		],
+		"client": [
+			"net.mk.ArchersArsenalClient"
+		]
+	},
+	"mixins": [
+		"archers_arsenal.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.14.21",
+		"minecraft": "~1.20",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}

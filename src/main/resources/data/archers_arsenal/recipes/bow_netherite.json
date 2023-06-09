@@ -1,0 +1,6 @@
+{
+  "type": "minecraft:smithing",
+  "base": { "item": "archers_arsenal:bow_diamond" },
+  "addition": { "item": "minecraft:netherite_ingot" },
+  "result": { "item": "archers_arsenal:bow_netherite" }
+}

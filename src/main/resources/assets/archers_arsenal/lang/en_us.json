@@ -1,0 +1,14 @@
+{
+  "itemGroup.archers_arsenal.tab": "Archers' Arsenal",
+
+  "item.archers_arsenal.villager_arrow": "Villager Arrow",
+  "item.archers_arsenal.barbed_arrow": "Barbed Arrow",
+  "item.archers_arsenal.bow_leather": "Leather Bow",
+  "item.archers_arsenal.bow_gold": "Golden Bow",
+  "item.archers_arsenal.bow_iron": "Iron Bow",
+  "item.archers_arsenal.bow_diamond": "Diamond Bow",
+  "item.archers_arsenal.bow_netherite": "Netherite Bow",
+  "item.archers_arsenal.quiver": "Quiver",
+
+  "tooltip.archers_arsenal.quiver": "When held in your off-hand, has a 20% chance to save fired arrows."
+}
