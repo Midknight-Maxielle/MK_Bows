@@ -2,10 +2,6 @@ package net.mk;
 
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.event.player.UseItemCallback;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.registry.RegistryKey;
-import net.minecraft.registry.RegistryKeys;
-import net.minecraft.util.Identifier;
 import net.mk.entities.ModEntities;
 import net.mk.events.QuiverLogicHandler;
 import net.mk.items.ModItemGroup;
@@ -22,6 +18,7 @@ public class ArchersArsenal implements ModInitializer {
     public void onInitialize() {
 
         ModItems.registerModItems();
+        ModItems.addItemsToItemGroup();
         ModEntities.registerEntities();
         ModItemGroup.registerItemGroups();
 

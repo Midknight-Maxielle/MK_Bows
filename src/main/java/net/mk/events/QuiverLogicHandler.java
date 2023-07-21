@@ -1,6 +1,8 @@
 package net.mk.events;
 
 import net.fabricmc.fabric.api.event.player.UseItemCallback;
+import net.minecraft.enchantment.EnchantmentHelper;
+import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.BowItem;
 import net.minecraft.item.ItemStack;
@@ -20,11 +22,18 @@ public class QuiverLogicHandler implements UseItemCallback {
         boolean roll = false;
 
         if(offhand.getItem() instanceof QuiverItem quiver && mainhand.getItem() instanceof BowItem) {
-            roll = quiver.rollArrowSave(world);
 
-            if (roll) {
-                offhand.damage(1, player, playerEntity -> playerEntity.sendToolBreakStatus(player.getActiveHand()));
-                arrows.increment(1);
+            int infinityLVL = EnchantmentHelper.getLevel(Enchantments.INFINITY, mainhand);
+            boolean isInfinity = (infinityLVL > 0 || player.getAbilities().creativeMode);
+
+            if (!isInfinity) {
+
+                roll = quiver.rollArrowSave(world);
+
+                if (roll) {
+                    offhand.damage(1, player, playerEntity -> playerEntity.sendToolBreakStatus(player.getActiveHand()));
+                    arrows.increment(1);
+                }
             }
         }
 

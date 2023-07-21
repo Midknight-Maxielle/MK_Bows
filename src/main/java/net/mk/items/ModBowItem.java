@@ -20,16 +20,14 @@ import org.lwjgl.system.NonnullDefault;
 
 public class ModBowItem extends BowItem {
 
-    // Public fields - used to set custom damage and draw-time modifiers + manage bow use and arrow pickup for infinity and creative mode.
-
-    public boolean HAS_NATURAL_INFINITY;
+    private final boolean GOLDEN_CRITICAL;
 
     // Constructor
 
-    public ModBowItem(Settings settings, boolean inf) {
+    public ModBowItem(Settings settings, boolean gold_crit) {
 
         super(settings);
-        HAS_NATURAL_INFINITY = inf;
+        GOLDEN_CRITICAL = gold_crit;
 
     }
 
@@ -41,8 +39,7 @@ public class ModBowItem extends BowItem {
         return
                 IS_CREATIVE ||
                         EnchantmentHelper.getLevel(Enchantments.INFINITY, bow) > 0 ||
-                        !player.getProjectileType(bow).isEmpty() ||
-                        HAS_NATURAL_INFINITY;
+                        !player.getProjectileType(bow).isEmpty();
 
     }
 
@@ -69,7 +66,7 @@ public class ModBowItem extends BowItem {
 
         if (entity instanceof PlayerEntity player) {
             boolean IS_CREATIVE = player.getAbilities().creativeMode;
-            boolean HAS_INFINITY = HAS_NATURAL_INFINITY || IS_CREATIVE || EnchantmentHelper.getLevel(Enchantments.INFINITY, bow) > 0;
+            boolean HAS_INFINITY = IS_CREATIVE || EnchantmentHelper.getLevel(Enchantments.INFINITY, bow) > 0;
             ItemStack arrows = player.getProjectileType(bow);
 
             if (!arrows.isEmpty() || HAS_INFINITY) {
@@ -92,13 +89,13 @@ public class ModBowItem extends BowItem {
                         ppEntity.setVelocity(player, player.getPitch(), player.getYaw(), 0.0F, f * 3.0F, 1.0F);
 
                         // Sets the arrow to critical if it was loosed at exactly max pull time.
-                        if (f == 1.0F) {
+                        if (f == 1.0F || (GOLDEN_CRITICAL)) {
                             ppEntity.setCritical(true);
                         }
 
                         // Sets effects for various bow enchantments
 
-                        int powerLVL = EnchantmentHelper.getLevel(Enchantments.PUNCH, bow);
+                        int powerLVL = EnchantmentHelper.getLevel(Enchantments.POWER, bow);
                         if (powerLVL > 0) {
                             ppEntity.setDamage(ppEntity.getDamage() + (double) powerLVL * 0.5 + 0.5);
                         }
@@ -128,7 +125,7 @@ public class ModBowItem extends BowItem {
                             (PlayerEntity) null, player.getX(), player.getY(), player.getZ(),
                             SoundEvents.ENTITY_ARROW_SHOOT, SoundCategory.PLAYERS,
                             1.0F, 1.0F / (world.getRandom().nextFloat() * 0.4F + 1.2F) + f * 0.5F);
-                    if (!HAS_INFINITY && !IS_CREATIVE) {
+                    if (!HAS_INFINITY) {
 
                         arrows.decrement(1);
                         if (arrows.isEmpty()) {

@@ -41,7 +41,7 @@ public class ModItems {
             ) {
                 @Override @NonnullDefault
                 public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-                    tooltip.add(Text.literal("This bow has a natural Infinity effect."));
+                    tooltip.add(Text.literal("Arrows shot from this bow are always critical."));
                     super.appendTooltip(stack, world, tooltip, context);
                 }
             }
@@ -74,7 +74,18 @@ public class ModItems {
 
     // Quiver Item //
 
-    public static final Item QUIVER = registerItem("quiver", new QuiverItem(new FabricItemSettings().maxDamage(64)));
+    public static final Item QUIVER = registerItem("quiver",
+            new QuiverItem(new FabricItemSettings()
+                    .maxDamage(64)
+            ) {
+                @Override
+                @NonnullDefault
+                public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
+                    tooltip.add(Text.literal("Has a 25% of saving shot arrows when held in your off-hand."));
+                    super.appendTooltip(stack, world, tooltip, context);
+                }
+            }
+    );
 
     // Register Methods //
 
