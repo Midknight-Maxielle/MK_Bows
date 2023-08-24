@@ -2,8 +2,8 @@ package net.mk;
 
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
-import net.minecraft.client.item.ClampedModelPredicateProvider;
 import net.minecraft.client.item.ModelPredicateProviderRegistry;
+import net.minecraft.client.item.UnclampedModelPredicateProvider;
 import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
 import net.mk.entities.ModEntities;
@@ -15,11 +15,11 @@ public class ArchersArsenalClient implements ClientModInitializer {
     private static final Identifier PULL = new Identifier("pull");
     private static final Identifier PULLING = new Identifier("pulling");
 
-    private static final ClampedModelPredicateProvider PULL_PROVIDER = (stack, world, entity, seed) ->
+    private static final UnclampedModelPredicateProvider PULL_PROVIDER = (stack, world, entity, seed) ->
             (entity == null ? 0.0F : entity.getActiveItem() != stack ? 0.0F :
                     (stack.getMaxUseTime() - entity.getItemUseTimeLeft()) / 20.F);
 
-    private static final ClampedModelPredicateProvider PULLING_PROVIDER = (stack, world, entity, seed) ->
+    private static final UnclampedModelPredicateProvider PULLING_PROVIDER = (stack, world, entity, seed) ->
             ((entity != null) && entity.isUsingItem() && (entity.getActiveItem() == stack) ? 1.0F : 0.0F);
 
     private void registerBow(Item bow) {

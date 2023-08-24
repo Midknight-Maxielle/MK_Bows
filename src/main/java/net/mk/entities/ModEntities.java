@@ -4,9 +4,8 @@ import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
 import net.minecraft.entity.EntityDimensions;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
-import net.minecraft.registry.Registries;
 import net.minecraft.util.Identifier;
-import net.minecraft.registry.Registry;
+import net.minecraft.util.registry.Registry;
 import net.mk.ArchersArsenal;
 
 public class ModEntities {
@@ -16,8 +15,8 @@ public class ModEntities {
 
     public static void registerEntities() {
 
-        Registry.register(Registries.ENTITY_TYPE, new Identifier(ArchersArsenal.MOD_ID, "barbed_arrow"), BARBED_ARROW_TYPE);
-        Registry.register(Registries.ENTITY_TYPE, new Identifier(ArchersArsenal.MOD_ID, "villager_arrow"), VILLAGER_ARROW_TYPE);
+        Registry.register(Registry.ENTITY_TYPE, new Identifier(ArchersArsenal.MOD_ID, "barbed_arrow"), BARBED_ARROW_TYPE);
+        Registry.register(Registry.ENTITY_TYPE, new Identifier(ArchersArsenal.MOD_ID, "villager_arrow"), VILLAGER_ARROW_TYPE);
 
     }
 

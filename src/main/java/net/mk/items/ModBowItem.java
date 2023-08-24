@@ -39,7 +39,7 @@ public class ModBowItem extends BowItem {
         return
                 IS_CREATIVE ||
                         EnchantmentHelper.getLevel(Enchantments.INFINITY, bow) > 0 ||
-                        !player.getProjectileType(bow).isEmpty();
+                        !player.getArrowType(bow).isEmpty();
 
     }
 
@@ -67,7 +67,7 @@ public class ModBowItem extends BowItem {
         if (entity instanceof PlayerEntity player) {
             boolean IS_CREATIVE = player.getAbilities().creativeMode;
             boolean HAS_INFINITY = IS_CREATIVE || EnchantmentHelper.getLevel(Enchantments.INFINITY, bow) > 0;
-            ItemStack arrows = player.getProjectileType(bow);
+            ItemStack arrows = player.getArrowType(bow);
 
             if (!arrows.isEmpty() || HAS_INFINITY) {
                 if (arrows.isEmpty()) {

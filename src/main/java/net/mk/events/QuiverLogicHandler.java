@@ -18,8 +18,8 @@ public class QuiverLogicHandler implements UseItemCallback {
 
         ItemStack offhand = player.getOffHandStack();
         ItemStack mainhand = player.getMainHandStack();
-        ItemStack arrows = player.getProjectileType(mainhand);
-        boolean roll = false;
+        ItemStack arrows = player.getArrowType(mainhand);
+        boolean roll;
 
         if(offhand.getItem() instanceof QuiverItem quiver && mainhand.getItem() instanceof BowItem) {
 
